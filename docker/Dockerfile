@@ -11,5 +11,7 @@ COPY . /app
 RUN pip install --upgrade pip && \
     pip install -r requirements.txt
 
+ENV PYTHONPATH=/app
+
 # Comando padrão ao iniciar o container (pode ser alterado para scripts)
-CMD ["python"]
+CMD ["python", "main.py"]
