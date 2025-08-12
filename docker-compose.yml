@@ -1,0 +1,9 @@
+services:
+  app:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    container_name: social-sentiment-app
+    tty: true
